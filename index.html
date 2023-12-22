@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --CL-GreenBg: rgba(163, 220, 214, 0.3);
+            --CL-Green: #2ec4b6;
+            --CL-Black: #000b0a;
+            --CL-Grey: #737373;
+            --CL-White: #ffffff;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            background-color: var(--CL-GreenBg);
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 80px;
+        }
+
+        .left {
+            flex-basis: 50%;
+        }
+
+        .left img {
+            width: 80px;
+        }
+
+        .left h2 {
+            color: var(--CL-Black);
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 50px;
+            letter-spacing: -0.8px;
+        }
+
+        .left p#info-desktop {
+            color: var(--CL-Grey);
+            line-height: 25px;
+            /* 156.25% */
+            margin-top: 20px;
+            margin-right: 120px;
+        }
+
+        .left p#info-mobile {
+            display: none;
+        }
+
+        .right {
+            flex-basis: 50%;
+            border-radius: 6px;
+            background: var(--CL-White);
+            box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.1);
+            max-height: 100%;
+            padding: 2.5rem;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px 40px;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-container label,
+        .select-container label {
+            color: var(--CL-Grey);
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 1.25rem;
+            letter-spacing: 0.2px;
+            margin-bottom: 8px;
+        }
+
+        .input-container input {
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: var(--CL-Black);
+        }
+
+        .input-container input:focus {
+            outline: none;
+            border: 1px solid var(--CL-Green);
+        }
+
+        .select-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .select-container select {
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: var(--CL-Black);
+        }
+
+        .select-container select:focus {
+            outline: none;
+            border: 1px solid var(--CL-Green);
+        }
+
+        @media (max-width: 1024px) {
+            .wrapper {
+                padding: 80px 40px;
+                display: block;
+            }
+
+            .left {
+                padding-right: 0;
+            }
+
+            .right {
+                margin-top: 40px;
+            }
+
+
+            .left p {
+                margin-right: 0;
+            }
+
+            .left p#info-desktop {
+                display: none;
+            }
+
+            .left p#info-mobile {
+                display: block;
+                color: var(--CL-Grey);
+                line-height: 25px;
+                /* 156.25% */
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .wrapper {
+                padding: 80px 20px;
+            }
+
+            .right {
+                padding: 2rem;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrapper">
+        <div class="left">
+            <img src="./assets/logo.svg" alt="logo" />
+            <h2>For Individuals</h2>
+            <p id="info-desktop">Start benefiting from the wellness experience. For companies looking on increasing
+                productivity, and improving organization wellness.</p>
+            <p id="info-mobile">Inspiring wholesome harmony for the mind, body and spirit, for everyone, everywhere.</p>
+        </div>
+        <form class="right">
+            <div class="input-container">
+                <label for="first-name">First Name</label>
+                <input id="first-name" name="first-name" type="text" placeholder="Enter first name" />
+            </div>
+
+            <div class="input-container">
+                <label for="last-name">Last Name</label>
+                <input id="last-name" name="last-name"  type="text" placeholder="Enter last name" />
+            </div>
+
+            <div class="select-container">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="input-container">
+                <label for="dob">Date of Birth</label>
+                <input id="dob" name="dob" type="date" />
+            </div>
+        </form>
+    </ma>
+</body>
+
+</html>
