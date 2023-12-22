@@ -124,6 +124,23 @@
             border: 1px solid var(--CL-Green);
         }
 
+        .select-container select option {
+            color: var(--CL-Black);
+        }
+
+        button {
+            grid-column: span 2;
+            background: var(--CL-Green);
+            border-radius: 4px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: var(--CL-White);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
         @media (max-width: 1024px) {
             .wrapper {
                 padding: 80px 40px;
@@ -186,7 +203,7 @@
 
             <div class="input-container">
                 <label for="last-name">Last Name</label>
-                <input id="last-name" name="last-name"  type="text" placeholder="Enter last name" />
+                <input id="last-name" name="last-name" type="text" placeholder="Enter last name" />
             </div>
 
             <div class="select-container">
@@ -201,8 +218,10 @@
                 <label for="dob">Date of Birth</label>
                 <input id="dob" name="dob" type="date" />
             </div>
+
+            <button type="submit">Submit</button>
         </form>
-    </ma>
+        </ma>
 </body>
 
 </html>
